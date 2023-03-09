@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import "../home.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import "./home.css";
 import CodeCamp from "./CodeCamp";
-import Footer from '../../components/footer/Footer'
+import Footer from "../../components/footer/Footer";
 import logo from "../../assets/Nupat LOGO blue 1.png";
 import Rounded_img from "../../assets/techhub.jpg";
 import Sticker1 from "../../assets/teacher.png";
@@ -16,14 +16,13 @@ import logo1 from "../../assets/Rectangle 88.svg";
 import logo2 from "../../assets/Rectangle2.svg";
 import logo3 from "../../assets/Rectangle3.svg";
 import logo4 from "../../assets/Rectangle4.svg";
+import dropdown from "../../assets/vector.svg";
 import { useEffect } from "react";
 
-const Home = ({ prop }) => {
-
-  useEffect(()=>{
-   Aos.init({duration:3000});
-  },[]);
-
+const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
 
   return (
     <>
@@ -33,8 +32,27 @@ const Home = ({ prop }) => {
             <img src={logo} alt="logo" />
           </div>
           <div className=" w-1/3 pt-3 justify-around flex">
-            <div className=" pr-5  text-2xl ">
-              College <sub>▼</sub>
+            <div className=" pr-5  text-2xl flex">
+              College
+              <div className="dropdown">
+                <label tabIndex={0} className="btn m-1">
+                  <img src={dropdown} />
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu p-1  bg-base-100 rounded-box "
+                >
+                  <li>
+                  <Link to="/college of engineering" > College of Engineering</Link>
+                  </li>
+                  <li>
+                  <Link to="/college of engineering" > College of Engineering</Link>
+                  </li>
+                  <li>
+                  <Link to="/college of engineering" > College of Engineering</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="pr-5  text-2xl">
               <Link to="/">FAQ</Link>
@@ -62,7 +80,7 @@ const Home = ({ prop }) => {
             </p>
             <p className="slide2 text-2xl ">Find your Voice with Nupat </p>
             <div className="slide4 flex mt-14 absolute">
-              <div >
+              <div>
                 <Link to="/" className="signup mr-5">
                   Sign Up
                 </Link>
@@ -75,52 +93,59 @@ const Home = ({ prop }) => {
             </div>
           </div>
           <div className=" techhub mt-10">
-            <img className="slide3 rounded-full " src={Rounded_img} alt="Tech hub" />
+            <img
+              className="slide3 rounded-full "
+              src={Rounded_img}
+              alt="Tech hub"
+            />
           </div>
-        </div> 
+        </div>
       </section>
       <section className="Section_2 m-28">
         <div className=" text-center ">
-          <h2 className=" text-4xl mb-10 font-semibold"  >
+          <h2 className=" text-4xl mb-10 font-semibold">
             With Nupat Code Camp
           </h2>
-          <p className=" w-8/12 my-0 mx-auto text-xl mx-98"  data-aos='fade-right'>
+          <p
+            className=" w-8/12 my-0 mx-auto text-xl mx-98"
+            data-aos="fade-right"
+          >
             Get a unique combination of remote learning, consistent live support
-            and affordability to start your career today
+            and affordability to start your career today.
           </p>
         </div>
         <div className="codeCampComponenent overflow-x-scroll overflow-y-hidden">
           <div className=" flex justify-between">
             <CodeCamp
               sticker={Sticker1}
-              title="1-1 mentorship"
+              title="1-1 Mentorship"
               content="You will be mentored by one of our industry experts during and after your bootcamp "
             />
             <CodeCamp
               sticker={Sticker2}
-              title="1-1 mentorship"
+              title="Group Task"
               content="You will be mentored by one of our industry experts during and after your bootcamp "
             />
             <CodeCamp
               sticker={Sticker3}
-              title="1-1 mentorship"
+              title="Task Based Methodology"
               content="You will be mentored by one of our industry experts during and after your bootcamp "
             />
           </div>
           <div className=" flex justify-between">
             <CodeCamp
               sticker={Sticker4}
-              title="1-1 mentorship"
+              title="Exposure to Live Projects"
               content="You will be mentored by one of our industry experts during and after your bootcamp "
             />
             <CodeCamp
               sticker={Sticker5}
-              title="1-1 mentorship"
+              title="Masterclass"
               content="You will be mentored by one of our industry experts during and after your bootcamp "
             />
             <CodeCamp
               sticker={Sticker4}
-              title="1-1 mentorship"
+              title="Internship"
               content="You will be mentored by one of our industry experts during and after your bootcamp "
             />
           </div>
@@ -139,57 +164,103 @@ const Home = ({ prop }) => {
         <div className=" flex1 flex justify-between my-10 " data-aos="fade-up">
           <div className="singlebox program_border m-3">
             <div className=" bg-indigo-900 flex pl-5">
-              <img src={logo1} alt="icon"  />
-              <h1 className=" font-semibold text-3xl p-5 text-white">College of Engineering</h1>
+              <img src={logo1} alt="icon" />
+              <h1 className=" font-semibold text-3xl p-5 text-white">
+                College of Engineering
+              </h1>
             </div>
-            <div  className="w-11/12 mx-auto text-xl font-medium">
-              <p>Gain the knowledge, skills, tools and experience you need to develop computer software. Our tracks include : Frontend software development, backend software development, Fullstack software development, blockchain development, mobile software development….</p>
-              <Link to='/collegeofmanagement' className=" w-40 box-content "> <p className=" w-40 my-8 p-3 border-black border border-solid rounded-md text-center"> learn more </p></Link>
+            <div className="w-11/12 mx-auto text-xl font-medium">
+              <p>
+                Gain the knowledge, skills, tools and experience you need to
+                develop computer software. Our tracks include : Frontend
+                software development, backend software development, Fullstack
+                software development, blockchain development, mobile software
+                development….
+              </p>
+              <Link to="/college of engineering" className=" w-40 box-content ">
+                
+                <p className=" w-40 my-8 p-3 border-black border border-solid rounded-md text-center">
+                  
+                  learn more
+                </p>
+              </Link>
             </div>
           </div>
 
           <div className="singlebox program_border m-3">
             <div className=" bg-green-700 flex pl-5">
-              <img src={logo2} alt="icon"  />
-              <h1 className=" font-semibold text-3xl p-5 text-white">College of Data</h1>
+              <img src={logo2} alt="icon" />
+              <h1 className=" font-semibold text-3xl p-5 text-white">
+                College of Data
+              </h1>
             </div>
-            <div  className="w-11/12 mx-auto text-xl font-medium">
-              <p>Gain the knowledge, skills, tools and experience you need to develop computer software. Our tracks include : Frontend software development, backend software development, Fullstack software development, blockchain development, mobile software development….</p>
-              <Link to='/collegeofmanagement'> <p className=" w-40 p-3 my-8 border-black border border-solid rounded-md text-center"> learn more </p></Link>
+            <div className="w-11/12 mx-auto text-xl font-medium">
+              <p>
+                Gain the knowledge, skills, tools and experience you need to
+                develop computer software. Our tracks include : Frontend
+                software development, backend software development, Fullstack
+                software development, blockchain development, mobile software
+                development….
+              </p>
+              <Link to="/college of data">
+                
+                <p className=" w-40 p-3 my-8 border-black border border-solid rounded-md text-center">               
+                  learn more
+                </p>
+              </Link>
             </div>
           </div>
-          
         </div>
 
         <div className=" flex2 flex justify-between my-10" data-aos="fade-up">
-        <div className="singlebox program_border m-3">
+          <div className="singlebox program_border m-3">
             <div className=" bg-sky-400 flex pl-5">
-              <img src={logo3} alt="icon"  />
-              <h1 className=" font-semibold text-3xl p-5 text-white">College of Design</h1>
+              <img src={logo3} alt="icon" />
+              <h1 className=" font-semibold text-3xl p-5 text-white">
+                College of Design
+              </h1>
             </div>
             <div className=" w-11/12 mx-auto text-xl font-medium">
-              <p>Gain the knowledge, skills, tools and experience you need to develop computer software. Our tracks include : Frontend software development, backend software development, Fullstack software development, blockchain development, mobile software development….</p>
-              <Link to='/collegeofmanagement'> <p className=" w-40 p-3 my-8 border-black border border-solid rounded-md text-center"> learn more </p></Link>
+              <p>
+                Gain the knowledge, skills, tools and experience you need to
+                develop computer software. Our tracks include : Frontend
+                software development, backend software development, Fullstack
+                software development, blockchain development, mobile software
+                development….
+              </p>
+              <Link to="/college of design">
+                <p className=" w-40 p-3 my-8 border-black border border-solid rounded-md text-center">
+                  learn more
+                </p>
+              </Link>
             </div>
           </div>
           <div className="singlebox program_border m-3">
             <div className=" bg-orange-400 flex pl-5 ">
-              <img src={logo4} alt="icon"  />
-              <h1 className=" font-semibold text-3xl p-5 text-white">College of Management</h1>
+              <img src={logo4} alt="icon" />
+              <h1 className=" font-semibold text-3xl p-5 text-white">
+                College of Management
+              </h1>
             </div>
-            <div  className=" w-11/12 mx-auto text-xl font-medium">
-              <p>Gain the knowledge, skills, tools and experience you need to develop computer software. Our tracks include : Frontend software development, backend software development, Fullstack software development, blockchain development, mobile software development….</p>
-              <Link to='/collegeofmanagement' className="  bg-black " > <p className="w-40 p-3 my-8 border-black border border-solid rounded-md text-center"> learn more </p></Link>
+            <div className=" w-11/12 mx-auto text-xl font-medium">
+              <p>
+                Gain the knowledge, skills, tools and experience you need to
+                develop computer software. Our tracks include : Frontend
+                software development, backend software development, Fullstack
+                software development, blockchain development, mobile software
+                development….
+              </p>
+              <Link to="/college of management" className="  bg-black ">
+                <p className="w-40 p-3 my-8 border-black border border-solid rounded-md text-center">
+                  learn more
+                </p>
+              </Link>
             </div>
           </div>
         </div>
       </section>
       <section className="section4">
-        <div className=" border-sky-400 border-2 border-solid p-5 border-x-neutral-50 mb-10">
-
-
-
-        </div>
+        <div className=" border-sky-400 border-2 border-solid p-5 border-x-neutral-50 mb-10"></div>
       </section>
       <Footer />
     </>

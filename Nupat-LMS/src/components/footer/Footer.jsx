@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <div className="foot last w-4/5 p-5 flex justify-between mx-auto my-5 rounded-xl text-white">
+      <div className="foot bg-primary w-4/5 p-5 flex justify-between mx-auto my-5 rounded-xl text-white">
         <div>
           <h2 className=" mb-2 text-3xl ">Subscribe</h2>
           <h3 className=" w-80 mr-2">
@@ -103,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="last h-14 w-full"></div>
+      <div className="   h-14 w-full bg-primary"></div>
     </div>
   );
 };

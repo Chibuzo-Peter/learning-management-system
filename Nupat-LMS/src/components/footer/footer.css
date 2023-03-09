@@ -1,12 +1,8 @@
-.last{
-    background-color: #131E47;
-  }
-  
-  input::placeholder{
-    color: #fff;
-    opacity: 100%;
+input::placeholder{
+  color: #fff;
+  opacity: 100%;
 
-  }
+}
   .sub-btn{
     background: #fff;
     color: #131E47;

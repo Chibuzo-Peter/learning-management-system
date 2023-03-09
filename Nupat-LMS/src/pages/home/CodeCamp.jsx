@@ -1,5 +1,5 @@
 import React from 'react'
-import '../home.css'
+import './home.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -18,7 +18,7 @@ const CodeCamp = (props) => {
          <div>
            <img src={props.sticker} alt="img"  className=' ml-auto mr-auto'/>
             </div>
-            <div className=' text-xl title'>
+            <div className='title font-semibold text-xl text-primary'>
                 {props.title}
             </div>
             <div>
@@ -26,7 +26,7 @@ const CodeCamp = (props) => {
                 {props.content}
             </div>
         </div>
-
+ 
     </div>
     </>
   )
